@@ -10,7 +10,6 @@ namespace UnlimitedSketchZoom {
 #endif
 	public static class Main {
 		static Harmony harmony;
-		static UnityModManager.ModEntry lastEntry;
 
 		public static bool Load(UnityModManager.ModEntry entry) {
 			harmony = new Harmony(entry.Info.Id);
@@ -19,7 +18,6 @@ namespace UnlimitedSketchZoom {
 #if DEBUG
 			entry.OnUnload = OnUnload;
 #endif
-			lastEntry = entry;
 
 			return true;
 		}
@@ -36,7 +34,6 @@ namespace UnlimitedSketchZoom {
 
 #if DEBUG
 		static bool OnUnload(UnityModManager.ModEntry entry) {
-			lastEntry = null;
 			return true;
 		}
 #endif
