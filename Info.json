@@ -1,0 +1,9 @@
+{
+	"Id": "UnlimitedSketchZoom",
+	"DisplayName": "Unlimited Sketch Zoom",
+	"Author": "LoganDark",
+	"GameVersion": "0.1.75",
+	"Version": "1.0.0",
+	"ManagerVersion": "0.23.5.0",
+	"EntryMethod": "UnlimitedSketchZoom.Main.Load"
+}
