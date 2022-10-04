@@ -13,12 +13,7 @@ namespace UnlimitedSketchZoom {
 
 		public static bool Load(UnityModManager.ModEntry entry) {
 			harmony = new Harmony(entry.Info.Id);
-
 			entry.OnToggle = OnToggle;
-#if DEBUG
-			entry.OnUnload = OnUnload;
-#endif
-
 			return true;
 		}
 
@@ -31,12 +26,6 @@ namespace UnlimitedSketchZoom {
 
 			return true;
 		}
-
-#if DEBUG
-		static bool OnUnload(UnityModManager.ModEntry entry) {
-			return true;
-		}
-#endif
 
 		[HarmonyPatch(typeof(Visor.ProcessorUI), nameof(Visor.ProcessorUI.EnterZoomView))]
 		class Patch {
